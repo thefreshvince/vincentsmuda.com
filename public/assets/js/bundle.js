@@ -78,11 +78,22 @@ var _devtools = __webpack_require__(7);
 // General imports
 var devtools = new _devtools.DevTools();
 
+// Set the elements
+var el_main = document.getElementById('main');
+
 // Build the banner
 devtools.banner();
 
 // Build the resume
 devtools.resume();
+
+// Set the mac class on the body
+if (navigator.userAgent && ~navigator.userAgent.indexOf('Mac OS X')) el_main.classList.add('browser--osx');
+
+// Set the timeout
+setTimeout(function () {
+  return el_main.classList.add('loaded');
+}, 500);
 
 /***/ }),
 /* 1 */
@@ -124,7 +135,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  font-family: 'Nixie One';\n  -webkit-font-smoothing: antialiased; }\n", ""]);
+exports.push([module.i, ".animated {\n  animation-duration: 0.5s;\n  animation-fill-mode: both; }\n\n@keyframes fadeInUp {\n  from {\n    opacity: 0;\n    transform: translate3d(0, 20px, 0); }\n  to {\n    opacity: 1;\n    transform: none; } }\n\n::-moz-selection {\n  /* Code for Firefox */\n  color: #8956a2;\n  background: #fff; }\n\n::selection {\n  color: red;\n  background: yellow; }\n\nbody, html {\n  margin: 0;\n  padding: 0; }\n\nbody {\n  font-size: 0.75em;\n  background: #8956a2;\n  color: #fff;\n  font-family: 'Nixie One';\n  -webkit-font-smoothing: antialiased; }\n\na {\n  color: #fff;\n  text-decoration: none;\n  transition: all 0.2s;\n  word-break: break-all; }\n  a:hover {\n    color: yellow; }\n  .loaded a {\n    word-wrap: break-word; }\n\nul {\n  font-size: 1.5em;\n  margin: 0;\n  padding: 0;\n  list-style: none; }\n\nli {\n  display: none;\n  animation-name: fadeInUp;\n  margin: 0 0 10px;\n  padding: 0; }\n  li:last-child {\n    margin-bottom: 0; }\n  li:nth-child(1) {\n    animation-delay: 0.1s; }\n  li:nth-child(2) {\n    animation-delay: 0.2s; }\n  li:nth-child(3) {\n    animation-delay: 0.3s; }\n  li:nth-child(4) {\n    animation-delay: 0.4s; }\n  li:nth-child(5) {\n    animation-delay: 0.5s; }\n  .loaded li {\n    display: block; }\n\n.main {\n  display: -webkit-flex;\n  display: -ms-flex;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh; }\n\n.title {\n  display: none;\n  animation-name: fadeInUp; }\n  .title__pre {\n    display: inline-block;\n    font-size: 0.4em;\n    opacity: 0.5; }\n  .loaded .title {\n    display: block; }\n\n.content {\n  padding: 20px;\n  max-width: 540px;\n  box-sizing: border-box; }\n\n.browser__osx {\n  display: none; }\n  .browser--osx .browser__osx {\n    display: inline-block; }\n\n.browser__other {\n  display: inline-block; }\n  .browser--osx .browser__other {\n    display: none; }\n\n.shortcut {\n  font-size: 0.7em;\n  vertical-align: middle; }\n\n@media (max-width: 499px) {\n  .shortcut {\n    display: none !important; } }\n\n@media (min-width: 500px) {\n  body {\n    font-size: 1em; } }\n", ""]);
 
 // exports
 

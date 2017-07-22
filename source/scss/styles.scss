@@ -1,4 +1,148 @@
+$color-primary: #8956a2;
+$color-white: #fff;
+
+.animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: $color-primary;
+    background: $color-white;
+}
+
+::selection {
+    color: red;
+    background: yellow;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  font-size: 0.75em;
+  background: $color-primary;
+  color: $color-white;
   font-family: 'Nixie One';
   -webkit-font-smoothing: antialiased;
+}
+
+a{
+  color: $color-white;
+  text-decoration: none;
+  transition: all 0.2s;
+  word-break: break-all;
+
+  &:hover{
+    color: yellow;
+  }
+
+  .loaded & {
+    word-wrap: break-word;
+  }
+}
+
+ul{
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li{
+  display: none;
+  animation-name: fadeInUp;
+  margin: 0 0 10px;
+  padding: 0;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{($i * 0.1)}s;
+    }
+  }
+
+  .loaded & {
+    display: block;
+  }
+}
+
+.main{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.title{
+  display: none;
+  animation-name: fadeInUp;
+
+  &__pre{
+    display: inline-block;
+    font-size: 0.4em;
+    opacity: 0.5;
+  }
+
+  .loaded & {
+    display: block;
+  }
+}
+
+.content{
+  padding: 20px;
+  max-width: 540px;
+  box-sizing: border-box;
+}
+
+.browser{
+  &__{
+    &osx{
+      display: none;
+      .browser--osx & {
+        display: inline-block;
+      }
+    }
+    &other{
+      display: inline-block;
+      .browser--osx & {
+        display: none;
+      }
+    }
+  }
+}
+
+.shortcut{
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+
+@media (max-width: 499px) {
+  .shortcut{
+    display: none !important;
+  }
+}
+
+@media (min-width: 500px) {
+  body{
+    font-size: 1em;
+  }
 }

@@ -7,7 +7,7 @@
 module.exports.Resume = {
 
 	// Basics
-	position: "Front-end developer",
+	position: "Front-end web developer",
 	location: "Montréal, Quebec, Canada",
 	email:    "throwmail@vincentsmuda.com",
 	github:	 "https://github.com/thefreshvince",
@@ -39,9 +39,9 @@ module.exports.Resume = {
 			position: "Developer",
 			period:   "2016-2017",
 			tasks:[
-				"Built a plethora of websites",
-				"Built tools to help increase productivity",
-				"Introduced some programming best practices"
+				"Built solutions for clients and internally",
+			  "Created tools to help increase productivity",
+			  "Introduced some programming methodologies"
 			]
 		}
 	],
@@ -49,13 +49,26 @@ module.exports.Resume = {
 	// Skills
 	_skills: {
 		development: [
-			"JS", "Webpack", "HTML", "CSS", "Sass", "PHP",
+			"JS", "Webpack", "HTML", "SASS", "PHP",
 			"GIT", "Gulp", "Shopify", "Laravel", "WordPress"
 		],
 		design: [
 			"Photoshop", "Illustrator", "AfterEffects"
 		],
+		other: [
+			"Organized for ease of maintainability",
+		  "Mentoring that improves cowokers’ skills",
+		  "Communication that gets things done",
+		  "Componentization that makes tasks managable",
+		  "QA to an annoyingly specific level"
+		]
 	},
+
+	_personality: [
+		"Encouraging", "Positive", "Energetic",
+    "Quality Driven", "Mindful", "Focused",
+    "Motivated", "Detetmined", "Creative"
+	],
 
 	// Projects
 	_projects: [
@@ -66,18 +79,13 @@ module.exports.Resume = {
 		},
 		{
 			name: "Meal",
-			description: "A flexible scaffolding tool built with node.",
+			description: "A flexible scaffolding tool.",
 			url: "https://github.com/thefreshvince/meal"
 		},
 		{
 			name: "Extractor",
-			description: "A script that extracts dist files of production node modules.",
+			description: "Extracts dists of production node modules.",
 			url: "https://github.com/thefreshvince/package-extractor"
-		},
-		{
-			name: "Personal Site",
-			description: "As I\'m not allowed to show sites that I have worked on, please use my publically published personal site to review my development integrity.",
-			url: "https://github.com/thefreshvince/vincentsmuda.com"
 		}
 	]
 

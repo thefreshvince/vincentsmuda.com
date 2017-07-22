@@ -1,0 +1,28 @@
+{
+	"ingredients": [
+		{
+			"type": "html",
+			"component_types_as_dirs": true,
+			"components_as_dirs": false,
+			"path": "/public/partials/"
+		},
+		{
+			"type": "scss",
+			"component_types_as_dirs": true,
+			"components_as_dirs": false,
+			"path": "/source/scss/partials/",
+			"prefix": "_",
+			"import": {
+				"name": "styles.scss",
+				"path": "/source/scss/"
+			}
+		},
+		{
+			"type": "js",
+			"component_types_as_dirs": true,
+			"components_as_dirs": false,
+			"path": "/source/js/partials/",
+			"prefix": "_"
+		}
+	]
+}

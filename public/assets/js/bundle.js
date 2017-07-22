@@ -704,7 +704,7 @@ module.exports.Resume = {
 		company: "Designshopp",
 		position: "Developer",
 		period: "2016-2017",
-		tasks: ["Built a plethora of websites", "Built tools to help increase productivity", "Introduced some programming best practices"]
+		tasks: ["Built solutions for clients and internally", "Created tools to help increase productivity", "Introduced some programming methodologies"]
 	}],
 
 	// Skills
@@ -723,21 +723,15 @@ module.exports.Resume = {
 		url: "https://github.com/thefreshvince/TheExterminator"
 	}, {
 		name: "Meal",
-		description: "A flexible scaffolding tool built with node.",
+		description: "A flexible scaffolding tool.",
 		url: "https://github.com/thefreshvince/meal"
 	}, {
 		name: "Extractor",
-		description: "A script that extracts dist files of production node modules.",
+		description: "Extracts dists of production node modules.",
 		url: "https://github.com/thefreshvince/package-extractor"
-	}, {
-		name: "Personal Site",
-		description: "As I\'m not allowed to show sites that I have worked on, please use my publically published personal site to review my development integrity.",
-		url: "https://github.com/thefreshvince/vincentsmuda.com"
 	}]
 
 };
-
-getProjectUrl();
 
 /***/ }),
 /* 7 */

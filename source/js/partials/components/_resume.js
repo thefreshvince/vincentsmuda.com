@@ -39,9 +39,9 @@ module.exports.Resume = {
 			position: "Developer",
 			period:   "2016-2017",
 			tasks:[
-				"Built a plethora of websites",
-				"Built tools to help increase productivity",
-				"Introduced some programming best practices"
+				"Built solutions for clients and internally",
+			  "Created tools to help increase productivity",
+			  "Introduced some programming methodologies"
 			]
 		}
 	],
@@ -55,7 +55,7 @@ module.exports.Resume = {
 		design: [
 			"Photoshop", "Illustrator", "AfterEffects"
 		],
-		other: [ 
+		other: [
 			"Organized for ease of maintainability",
 		  "Mentoring that improves cowokers’ skills",
 		  "Communication that gets things done",
@@ -79,21 +79,14 @@ module.exports.Resume = {
 		},
 		{
 			name: "Meal",
-			description: "A flexible scaffolding tool built with node.",
+			description: "A flexible scaffolding tool.",
 			url: "https://github.com/thefreshvince/meal"
 		},
 		{
 			name: "Extractor",
-			description: "A script that extracts dist files of production node modules.",
+			description: "Extracts dists of production node modules.",
 			url: "https://github.com/thefreshvince/package-extractor"
-		},
-		{
-			name: "Personal Site",
-			description: "As I\'m not allowed to show sites that I have worked on, please use my publically published personal site to review my development integrity.",
-			url: "https://github.com/thefreshvince/vincentsmuda.com"
 		}
 	]
 
 };
-
-getProjectUrl ()

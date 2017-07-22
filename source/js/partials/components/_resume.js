@@ -4,15 +4,17 @@
 
 */
 
-module.exports = {
+module.exports.Resume = {
 
-	_position: "Front-end developer",
-	_website:  "http://www.vincentsmuda.com",
-	_location: "Montréal, Quebec, Canada",
-	_email:    "throwmail@vincentsmuda.com",
-	_github:	 "https://github.com/thefreshvince",
+	// Basics
+	position: "Front-end developer",
+	location: "Montréal, Quebec, Canada",
+	email:    "throwmail@vincentsmuda.com",
+	github:	 "https://github.com/thefreshvince",
+	website:  "http://www.vincentsmuda.com",
 
-	education: [
+	// Education
+	_education: [
 		{
 			school:  "Northern Alberta Institute of Technology",
 			program: "Digital and interactive media design",
@@ -20,8 +22,8 @@ module.exports = {
 		}
 	],
 
-	employment: [
-
+	// Employment
+	_employment: [
 		{
 			company:  "Overhaul Media",
 			position: "Developer",
@@ -32,7 +34,6 @@ module.exports = {
 				"Integrated designs"
 			]
 		},
-
 		{
 			company:  "Designshopp",
 			position: "Developer",
@@ -43,46 +44,41 @@ module.exports = {
 				"Introduced some programming best practices"
 			]
 		}
-
 	],
 
-	skills: {
-
-		development:
-		[ "JS", "Webpack", "HTML", "CSS", "Sass", "PHP",
-			"GIT", "Gulp", "Shopify", "Laravel", "WordPress" ],
-
-		design:
-		[ "Photoshop", "Illustrator", "AfterEffects" ],
-
+	// Skills
+	_skills: {
+		development: [
+			"JS", "Webpack", "HTML", "CSS", "Sass", "PHP",
+			"GIT", "Gulp", "Shopify", "Laravel", "WordPress"
+		],
+		design: [
+			"Photoshop", "Illustrator", "AfterEffects"
+		],
 	},
 
-	projects: [
-
+	// Projects
+	_projects: [
 		{
-			name: 'Exterminator',
-			description: 'A QA script that saves everybody time.',
-			url: 'https://github.com/thefreshvince/TheExterminator'
+			name: "Exterminator",
+			description: "A QA script that saves everybody time.",
+			url: "https://github.com/thefreshvince/TheExterminator"
 		},
-
 		{
-			name: 'Meal',
-			description: 'A flexible scaffolding tool built with node.',
-			url: 'https://github.com/thefreshvince/meal'
+			name: "Meal",
+			description: "A flexible scaffolding tool built with node.",
+			url: "https://github.com/thefreshvince/meal"
 		},
-
 		{
-			name: 'Extractor',
-			description: 'A script that extracts dist files of production node modules.',
-			url: 'https://github.com/thefreshvince/package-extractor'
+			name: "Extractor",
+			description: "A script that extracts dist files of production node modules.",
+			url: "https://github.com/thefreshvince/package-extractor"
 		},
-
 		{
-			name: 'Personal Site',
-			description: 'As I\'m not allowed to show sites that I have worked on, please use my publically published personal site to review my development integrity.',
-			url: 'https://github.com/thefreshvince/vincentsmuda.com'
+			name: "Personal Site",
+			description: "As I\'m not allowed to show sites that I have worked on, please use my publically published personal site to review my development integrity.",
+			url: "https://github.com/thefreshvince/vincentsmuda.com"
 		}
-
 	]
 
 };

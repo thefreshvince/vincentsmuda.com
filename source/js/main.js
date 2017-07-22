@@ -1,5 +1,12 @@
 // General imports
 import '../scss/styles.scss';
-import {Resume} from './partials/components/_resume.js';
+import {DevTools} from './partials/components/_devtools';
 
-console.log(Resume);
+// instantiate the devtools
+const devtools = new DevTools();
+
+// Build the banner
+devtools.banner();
+
+// Build the resume
+devtools.resume();

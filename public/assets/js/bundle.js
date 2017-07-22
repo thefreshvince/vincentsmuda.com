@@ -72,10 +72,17 @@
 
 __webpack_require__(1);
 
-var _resume = __webpack_require__(6);
+var _devtools = __webpack_require__(7);
 
+// instantiate the devtools
 // General imports
-console.log(_resume.Resume);
+var devtools = new _devtools.DevTools();
+
+// Build the banner
+devtools.banner();
+
+// Build the resume
+devtools.resume();
 
 /***/ }),
 /* 1 */
@@ -726,6 +733,70 @@ module.exports.Resume = {
 	}]
 
 };
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	DEVTOOLS
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     */
+
+// Imports the resume object
+
+
+var _resume = __webpack_require__(6);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// Start our devtools class and export it
+module.exports.DevTools = function () {
+
+  /**
+   * Constructs our class
+   */
+  function DevTools() {
+    _classCallCheck(this, DevTools);
+  }
+
+  /**
+   * Logs the resume
+   */
+
+
+  _createClass(DevTools, [{
+    key: 'resume',
+    value: function resume() {
+      console.log(_resume.Resume);
+    }
+
+    /**
+     * Builds the banner
+     */
+
+  }, {
+    key: 'banner',
+    value: function banner() {
+      var string = '%c';
+      string += '\n/====================================================================\\\n\n';
+      string += '   __    __  _______    ______    ______    ______    __   ______\n';
+      string += '  /\\ \\  / / /\\__  __\\  /\\  __ \\  /\\  ___\\  /\\  ___\\  /\\_\\ /\\  ___\\\n';
+      string += '  \\ \\ \\/ /  \\///\\ \\//  \\ \\ \\ \\ \\ \\ \\ \\____ \\ \\  ___\\ \\/_/ \\ \\___  \\\n';
+      string += '   \\ \\__/     /\\_____\\  \\ \\_\\ \\_\\ \\ \\_____\\ \\ \\_____\\      \\/\\_____\\\n';
+      string += '    \\/_/      \\/_____/   \\/_/\\/_/  \\/_____/  \\/_____/       \\/_____/\n\n';
+      string += '                                  Resume\n\n';
+      string += '\\====================================================================/\n\n';
+      console.log(string, 'color:#8956a2;');
+    }
+  }]);
+
+  return DevTools;
+}();
 
 /***/ })
 /******/ ]);

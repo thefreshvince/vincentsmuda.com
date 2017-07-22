@@ -681,7 +681,7 @@ module.exports = function (css) {
 module.exports.Resume = {
 
 	// Basics
-	position: "Front-end developer",
+	position: "Front-end web developer",
 	location: "Montréal, Quebec, Canada",
 	email: "throwmail@vincentsmuda.com",
 	github: "https://github.com/thefreshvince",
@@ -709,9 +709,12 @@ module.exports.Resume = {
 
 	// Skills
 	_skills: {
-		development: ["JS", "Webpack", "HTML", "CSS", "Sass", "PHP", "GIT", "Gulp", "Shopify", "Laravel", "WordPress"],
-		design: ["Photoshop", "Illustrator", "AfterEffects"]
+		development: ["JS", "Webpack", "HTML", "SASS", "PHP", "GIT", "Gulp", "Shopify", "Laravel", "WordPress"],
+		design: ["Photoshop", "Illustrator", "AfterEffects"],
+		other: ["Organized for ease of maintainability", "Mentoring that improves cowokers’ skills", "Communication that gets things done", "Componentization that makes tasks managable", "QA to an annoyingly specific level"]
 	},
+
+	_personality: ["Encouraging", "Positive", "Energetic", "Quality Driven", "Mindful", "Focused", "Motivated", "Detetmined", "Creative"],
 
 	// Projects
 	_projects: [{
@@ -733,6 +736,8 @@ module.exports.Resume = {
 	}]
 
 };
+
+getProjectUrl();
 
 /***/ }),
 /* 7 */

@@ -13,7 +13,7 @@ a{
     color: yellow;
   }
 
-  .loaded & {
+  .main--loaded & {
     word-wrap: break-word;
   }
 }
@@ -43,7 +43,7 @@ li{
     }
   }
 
-  .loaded & {
+  .main--loaded & {
     display: block;
   }
 }

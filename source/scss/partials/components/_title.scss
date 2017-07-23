@@ -1,0 +1,18 @@
+/**
+ *	Title
+ */
+
+.title{
+  display: none;
+  animation-name: fadeInUp;
+
+  &__pre{
+    display: inline-block;
+    font-size: 0.4em;
+    opacity: 0.5;
+  }
+
+  .loaded & {
+    display: block;
+  }
+}

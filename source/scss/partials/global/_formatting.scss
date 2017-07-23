@@ -1,0 +1,49 @@
+/**
+ *  Formatting
+ */
+
+// Anchor links
+a{
+  color: $color-white;
+  text-decoration: none;
+  transition: all 0.2s;
+  word-break: break-all;
+
+  &:hover{
+    color: yellow;
+  }
+
+  .loaded & {
+    word-wrap: break-word;
+  }
+}
+
+// Unordered list
+ul{
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// List item
+li{
+  display: none;
+  animation-name: fadeInUp;
+  margin: 0 0 10px;
+  padding: 0;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{($i * 0.1)}s;
+    }
+  }
+
+  .loaded & {
+    display: block;
+  }
+}

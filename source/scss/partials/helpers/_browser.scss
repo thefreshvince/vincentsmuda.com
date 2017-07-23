@@ -1,0 +1,27 @@
+/**
+ *	Browser
+ */
+
+.browser{
+
+  &__{
+
+		// If the system is mac OSX
+    &osx{
+      display: none;
+
+      .browser--osx & {
+        display: inline-block;
+      }
+    }
+
+		// All other system OSs
+    &other{
+      display: inline-block;
+
+      .browser--osx & {
+        display: none;
+      }
+    }
+  }
+}

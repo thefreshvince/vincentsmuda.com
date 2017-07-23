@@ -10,6 +10,7 @@
 -->
 <html lang="en">
   <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -18,9 +19,9 @@
     <!-- Original Gangsters -->
     <meta property="og:url" content="http://vincentsmuda.com" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Vincent Smuda's Portfolio" />
-    <meta property="og:site_name" content="Vincent Smuda's Portfolio" />
-    <meta property="og:description" content="Hey there, name's Vince and I'm an intermediate front-end web developer with 6 years of experience." />
+    <meta property="og:title" content="Vincent Smuda. I write Javascript" />
+    <meta property="og:site_name" content="Vincent Smuda. I write Javascript" />
+    <meta property="og:description" content="Continuously writing Javascript, SCSS, HTML, and PHP." />
     <meta property="og:image" content="http://vincentsmuda.com/assets/images/og-image.png?v=4" />
 
     <!-- Favicons -->
@@ -44,16 +45,26 @@
 
     <title>Vincent Smuda. I write Javascript.</title>
 
+    <!--
+      These are the styles needed on pageload.
+      The rest will be loaded via main.js
+    -->
     <style media="screen">
-      body{
-        background: #8956a2;
+      .main{display: none;}
+      @keyframes purpleIn {
+        from {background: #fff;}
+        to {background: #8956a2;}
       }
-      .main{
-        display: none;
+      body{
+        animation-duration: 0.5s;
+        animation-fill-mode: both;
+        animation-name: purpleIn;
+        background: #fff;
       }
     </style>
 
   </head>
+
   <body>
 
     <div id="main" class="main">
@@ -74,7 +85,7 @@
               'github' =>	 'https://github.com/thefreshvince" target="_blank',
               'npm' => 'https://www.npmjs.com/~vincentsmuda" target="_blank',
               'linkedin' => 'https://www.linkedin.com/in/vincent-smuda-80b27014/" target="_blank',
-              'CV <span class="shortcut browser__osx">(Cmd + Opt + j)</span><span class="shortcut browser__other">(Ctrl + Shift + J)</span>' => '/assets/documents/resume.pdf" target="_blank'
+              'CV <span class="shortcut browser__osx">(Cmd + Opt + j)</span><span class="shortcut browser__other">(Ctrl + Shift + J)</span>' => '/assets/documents/resume.pdf?v=2" target="_blank'
             ] as $text => $link)
               echo "
                 <li class=\"animated\">
@@ -88,6 +99,7 @@
 
     </div>
 
+    <!-- our main bundle js -->
     <script src="/assets/js/bundle.js" charset="utf-8"></script>
 
     <!-- Analytics -->

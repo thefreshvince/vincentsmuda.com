@@ -1,0 +1,12 @@
+/**
+ *	Shorcut Displayer
+ */
+
+.shortcut{
+  font-size: 0.7em;
+  vertical-align: middle;
+
+  @include break(medium, down) {
+    display: none !important;
+  }
+}

@@ -1,29 +1,20 @@
-// General imports
+/**
+ *  The main entry for the site
+ */
 import '../scss/styles.scss';
 import {DevTools} from './partials/components/_devtools';
+import {Wrapper} from './partials/components/_wrapper'
 
-// instantiate the devtools
-const devtools = new DevTools();
-
-// Set the elements
-let el_main = document.getElementById('main');
+// instantiate our classes
+const devtools = new DevTools(),
+      wrapper = new Wrapper();
 
 // Build the banner
-devtools.banner();
-
 // Build the resume
+devtools.banner();
 devtools.resume();
 
-// Set the mac class on the body
-if(
-  navigator.userAgent &&
-  ~navigator.userAgent.indexOf('Mac OS X')
-) el_main.classList.add('browser--osx');
-
-// Set the timeout
-setTimeout(
-  () => el_main
-    .classList
-    .add('loaded'),
-  500
-);
+// Set the OS
+// Set the loaded state
+wrapper.setOS();
+wrapper.setLoaded();

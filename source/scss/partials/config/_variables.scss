@@ -1,0 +1,19 @@
+/**
+ *  Colors
+ */
+
+$color-primary: #8956a2;
+$color-white: #fff;
+$color-red: red;
+$color-yellow: yellow;
+
+/**
+ *  Breakpoints
+ */
+
+$breakpoints: (
+  medium: (
+    up: 500px,
+    down: 499px
+  )
+);

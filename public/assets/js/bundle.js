@@ -74,26 +74,24 @@ __webpack_require__(1);
 
 var _devtools = __webpack_require__(7);
 
-// instantiate the devtools
-// General imports
-var devtools = new _devtools.DevTools();
+var _wrapper = __webpack_require__(8);
 
-// Set the elements
-var el_main = document.getElementById('main');
+// instantiate our classes
+var devtools = new _devtools.DevTools(),
+    wrapper = new _wrapper.Wrapper();
 
 // Build the banner
-devtools.banner();
-
 // Build the resume
+/**
+ *  The main entry for the site
+ */
+devtools.banner();
 devtools.resume();
 
-// Set the mac class on the body
-if (navigator.userAgent && ~navigator.userAgent.indexOf('Mac OS X')) el_main.classList.add('browser--osx');
-
-// Set the timeout
-setTimeout(function () {
-  return el_main.classList.add('loaded');
-}, 500);
+// Set the OS
+// Set the loaded state
+wrapper.setOS();
+wrapper.setLoaded();
 
 /***/ }),
 /* 1 */
@@ -135,7 +133,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".animated {\n  animation-duration: 0.5s;\n  animation-fill-mode: both; }\n\n@keyframes fadeInUp {\n  from {\n    opacity: 0;\n    transform: translate3d(0, 20px, 0); }\n  to {\n    opacity: 1;\n    transform: none; } }\n\n::-moz-selection {\n  /* Code for Firefox */\n  color: #8956a2;\n  background: #fff; }\n\n::selection {\n  color: red;\n  background: yellow; }\n\nbody, html {\n  margin: 0;\n  padding: 0; }\n\nbody {\n  font-size: 0.75em;\n  background: #8956a2;\n  color: #fff;\n  font-family: 'Nixie One';\n  -webkit-font-smoothing: antialiased; }\n\na {\n  color: #fff;\n  text-decoration: none;\n  transition: all 0.2s;\n  word-break: break-all; }\n  a:hover {\n    color: yellow; }\n  .loaded a {\n    word-wrap: break-word; }\n\nul {\n  font-size: 1.5em;\n  margin: 0;\n  padding: 0;\n  list-style: none; }\n\nli {\n  display: none;\n  animation-name: fadeInUp;\n  margin: 0 0 10px;\n  padding: 0; }\n  li:last-child {\n    margin-bottom: 0; }\n  li:nth-child(1) {\n    animation-delay: 0.1s; }\n  li:nth-child(2) {\n    animation-delay: 0.2s; }\n  li:nth-child(3) {\n    animation-delay: 0.3s; }\n  li:nth-child(4) {\n    animation-delay: 0.4s; }\n  li:nth-child(5) {\n    animation-delay: 0.5s; }\n  .loaded li {\n    display: block; }\n\n.main {\n  display: -webkit-flex;\n  display: -ms-flex;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh; }\n\n.title {\n  display: none;\n  animation-name: fadeInUp; }\n  .title__pre {\n    display: inline-block;\n    font-size: 0.4em;\n    opacity: 0.5; }\n  .loaded .title {\n    display: block; }\n\n.content {\n  padding: 20px;\n  max-width: 540px;\n  box-sizing: border-box; }\n\n.browser__osx {\n  display: none; }\n  .browser--osx .browser__osx {\n    display: inline-block; }\n\n.browser__other {\n  display: inline-block; }\n  .browser--osx .browser__other {\n    display: none; }\n\n.shortcut {\n  font-size: 0.7em;\n  vertical-align: middle; }\n\n@media (max-width: 499px) {\n  .shortcut {\n    display: none !important; } }\n\n@media (min-width: 500px) {\n  body {\n    font-size: 1em; } }\n", ""]);
+exports.push([module.i, "/**\n *  Style\n *  It all comes together here...\n */\n/**\n *  Colors\n */\n/**\n *  Breakpoints\n */\n/*\n\n\tMIXINS\n\n*/\n/**\n *  System\n */\n::-moz-selection {\n  /* Code for Firefox */\n  color: red;\n  background: yellow; }\n\n::selection {\n  color: red;\n  background: yellow; }\n\n/**\n *  Animations\n */\n@keyframes fadeInUp {\n  from {\n    opacity: 0;\n    transform: translate3d(0, 20px, 0); }\n  to {\n    opacity: 1;\n    transform: none; } }\n\n/**\n *  Base\n */\nbody, html {\n  margin: 0;\n  padding: 0; }\n\nbody {\n  font-size: 0.75em;\n  background: #8956a2;\n  color: #fff;\n  font-family: 'Nixie One';\n  -webkit-font-smoothing: antialiased; }\n  @media (min-width: 500px) {\n    body {\n      font-size: 1em; } }\n\n.main {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh; }\n\n/**\n *  Formatting\n */\na {\n  color: #fff;\n  text-decoration: none;\n  transition: all 0.2s;\n  word-break: break-all; }\n  a:hover {\n    color: yellow; }\n  .main--loaded a {\n    word-wrap: break-word; }\n\nul {\n  font-size: 1.5em;\n  margin: 0;\n  padding: 0;\n  list-style: none; }\n\nli {\n  display: none;\n  animation-name: fadeInUp;\n  margin: 0 0 10px;\n  padding: 0; }\n  li:last-child {\n    margin-bottom: 0; }\n  li:nth-child(1) {\n    animation-delay: 0.1s; }\n  li:nth-child(2) {\n    animation-delay: 0.2s; }\n  li:nth-child(3) {\n    animation-delay: 0.3s; }\n  li:nth-child(4) {\n    animation-delay: 0.4s; }\n  li:nth-child(5) {\n    animation-delay: 0.5s; }\n  .main--loaded li {\n    display: block; }\n\n/**\n *  Helpers\n */\n.animated {\n  animation-duration: 0.5s;\n  animation-fill-mode: both; }\n\n/**\n *\tBrowser\n */\n.browser__osx {\n  display: none; }\n  .browser--osx .browser__osx {\n    display: inline-block; }\n\n.browser__other {\n  display: inline-block; }\n  .browser--osx .browser__other {\n    display: none; }\n\n/**\n *\tShorcut Displayer\n */\n.shortcut {\n  font-size: 0.7em;\n  vertical-align: middle; }\n  @media (max-width: 499px) {\n    .shortcut {\n      display: none !important; } }\n\n/**\n *\tTitle\n */\n.title {\n  display: none;\n  animation-name: fadeInUp; }\n  .title__pre {\n    display: inline-block;\n    font-size: 0.4em;\n    opacity: 0.5; }\n  .main--loaded .title {\n    display: block; }\n\n/**\n *\tHouses the site's content\n */\n.content {\n  padding: 20px;\n  max-width: 540px;\n  box-sizing: border-box; }\n", ""]);
 
 // exports
 
@@ -806,6 +804,68 @@ module.exports.DevTools = function () {
   }]);
 
   return DevTools;
+}();
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ *	WRAPPER
+ */
+
+module.exports.Wrapper = function () {
+
+	/**
+  *	Set up our vars
+  */
+	function Wrapper() {
+		_classCallCheck(this, Wrapper);
+
+		// Set the wrapper class
+		this.base_class = 'main';
+
+		// Store the main element
+		this.el = document.getElementById(this.base_class);
+	}
+
+	/**
+  *	Sets the opperating system as a class
+  */
+
+
+	_createClass(Wrapper, [{
+		key: 'setOS',
+		value: function setOS() {
+
+			// Set the mac class on the body
+			if (navigator.userAgent && ~navigator.userAgent.indexOf('Mac OS X')) this.el.classList.add('browser--osx');
+		}
+
+		/**
+   *	Adds a loaded state to the wrapper
+   */
+
+	}, {
+		key: 'setLoaded',
+		value: function setLoaded() {
+			var _this = this;
+
+			// Set the timeout
+			setTimeout(function () {
+				return _this.el.classList.add(_this.base_class + '--loaded');
+			}, 1000);
+		}
+	}]);
+
+	return Wrapper;
 }();
 
 /***/ })

@@ -77,7 +77,7 @@ var _devtools = __webpack_require__(7);
 var _wrapper = __webpack_require__(8);
 
 // instantiate our classes
-var devtools = new _devtools.DevTools(),
+var devtools = new _devtools.DevTools('body'),
     wrapper = new _wrapper.Wrapper();
 
 // Build the banner
@@ -133,7 +133,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/**\n *  Style\n *  It all comes together here...\n */\n/**\n *  Colors\n */\n/**\n *  Breakpoints\n */\n/*\n\n\tMIXINS\n\n*/\n/**\n *  System\n */\n::-moz-selection {\n  /* Code for Firefox */\n  color: red;\n  background: yellow; }\n\n::selection {\n  color: red;\n  background: yellow; }\n\n/**\n *  Animations\n */\n@keyframes fadeInUp {\n  from {\n    opacity: 0;\n    transform: translate3d(0, 20px, 0); }\n  to {\n    opacity: 1;\n    transform: none; } }\n\n/**\n *  Base\n */\nbody, html {\n  margin: 0;\n  padding: 0; }\n\nbody {\n  font-size: 0.75em;\n  background: #8956a2;\n  color: #fff;\n  font-family: 'Nixie One';\n  -webkit-font-smoothing: antialiased; }\n  @media (min-width: 500px) {\n    body {\n      font-size: 1em; } }\n\n.main {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh; }\n\n/**\n *  Formatting\n */\na {\n  color: #fff;\n  text-decoration: none;\n  transition: all 0.2s;\n  word-break: break-all; }\n  a:hover {\n    color: yellow; }\n  .main--loaded a {\n    word-wrap: break-word; }\n\nul {\n  font-size: 1.5em;\n  margin: 0;\n  padding: 0;\n  list-style: none; }\n\nli {\n  display: none;\n  animation-name: fadeInUp;\n  margin: 0 0 10px;\n  padding: 0; }\n  li:last-child {\n    margin-bottom: 0; }\n  li:nth-child(1) {\n    animation-delay: 0.1s; }\n  li:nth-child(2) {\n    animation-delay: 0.2s; }\n  li:nth-child(3) {\n    animation-delay: 0.3s; }\n  li:nth-child(4) {\n    animation-delay: 0.4s; }\n  li:nth-child(5) {\n    animation-delay: 0.5s; }\n  .main--loaded li {\n    display: block; }\n\n/**\n *  Helpers\n */\n.animated {\n  animation-duration: 0.5s;\n  animation-fill-mode: both; }\n\n/**\n *\tBrowser\n */\n.browser__osx {\n  display: none; }\n  .browser--osx .browser__osx {\n    display: inline-block; }\n\n.browser__other {\n  display: inline-block; }\n  .browser--osx .browser__other {\n    display: none; }\n\n/**\n *\tShorcut Displayer\n */\n.shortcut {\n  font-size: 0.7em;\n  vertical-align: middle; }\n  @media (max-width: 499px) {\n    .shortcut {\n      display: none !important; } }\n\n/**\n *\tTitle\n */\n.title {\n  display: none;\n  animation-name: fadeInUp; }\n  .title__pre {\n    display: inline-block;\n    font-size: 0.4em;\n    opacity: 0.5; }\n  .main--loaded .title {\n    display: block; }\n\n/**\n *\tHouses the site's content\n */\n.content {\n  padding: 20px;\n  max-width: 540px;\n  box-sizing: border-box; }\n", ""]);
+exports.push([module.i, "/**\n *  Style\n *  It all comes together here...\n */\n/**\n *  Colors\n */\n/**\n *  Breakpoints\n */\n/*\n\n\tMIXINS\n\n*/\n/**\n *  System\n */\n::-moz-selection {\n  /* Code for Firefox */\n  color: red;\n  background: yellow; }\n\n::selection {\n  color: red;\n  background: yellow; }\n\n/**\n *  Animations\n */\n@keyframes fadeInUp {\n  from {\n    opacity: 0;\n    transform: translate3d(0, 20px, 0); }\n  to {\n    opacity: 1;\n    transform: none; } }\n\n/**\n *  Base\n */\nbody, html {\n  margin: 0;\n  padding: 0; }\n\n.body {\n  font-size: 0.75em;\n  background: #8956a2;\n  color: #fff;\n  font-family: 'Nixie One';\n  -webkit-font-smoothing: antialiased; }\n  .body--devtools-open {\n    background: #c53737; }\n  @media (min-width: 500px) {\n    .body {\n      font-size: 1em; } }\n\n/*\n\n\tMAIN\n\n*/\n.main {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  transition: background 0.5s; }\n  .body--devtools-open .main {\n    background: #c53737; }\n\n/**\n *  Formatting\n */\na {\n  color: #fff;\n  text-decoration: none;\n  transition: all 0.2s;\n  word-break: break-all; }\n  a:hover {\n    color: yellow; }\n  .main--loaded a {\n    word-wrap: break-word; }\n\nul {\n  font-size: 1.5em;\n  margin: 0;\n  padding: 0;\n  list-style: none; }\n\nli {\n  display: none;\n  animation-name: fadeInUp;\n  margin: 0 0 10px;\n  padding: 0; }\n  li:last-child {\n    margin-bottom: 0; }\n  li:nth-child(1) {\n    animation-delay: 0.1s; }\n  li:nth-child(2) {\n    animation-delay: 0.2s; }\n  li:nth-child(3) {\n    animation-delay: 0.3s; }\n  li:nth-child(4) {\n    animation-delay: 0.4s; }\n  li:nth-child(5) {\n    animation-delay: 0.5s; }\n  .main--loaded li {\n    display: block; }\n\n/**\n *  Helpers\n */\n.animated {\n  animation-duration: 0.5s;\n  animation-fill-mode: both; }\n\n/**\n *\tBrowser\n */\n.browser__osx {\n  display: none; }\n  .browser--osx .browser__osx {\n    display: inline-block; }\n\n.browser__other {\n  display: inline-block; }\n  .browser--osx .browser__other {\n    display: none; }\n\n/**\n *\tShorcut Displayer\n */\n.shortcut {\n  font-size: 0.7em;\n  vertical-align: middle; }\n  @media (max-width: 499px) {\n    .shortcut {\n      display: none !important; } }\n\n/**\n *\tTitle\n */\n.title {\n  display: none;\n  animation-name: fadeInUp; }\n  .title__pre {\n    display: inline-block;\n    font-size: 0.4em;\n    opacity: 0.5; }\n  .main--loaded .title {\n    display: block; }\n\n/**\n *\tHouses the site's content\n */\n.content {\n  padding: 20px;\n  max-width: 540px;\n  box-sizing: border-box; }\n", ""]);
 
 // exports
 
@@ -782,11 +782,20 @@ module.exports.DevTools = function () {
 
     _classCallCheck(this, DevTools);
 
+    // Set the colors
+    this.colors = {
+      primary: '8956a2',
+      secondary: 'c53737'
+    };
+
     // Store the wrapper class
     this.wrapper_class = wrapper || 'main';
 
     // Set a reference to the wrapper
     this.wrapper = document.getElementById(this.wrapper_class);
+
+    // Set the current state of the devtools
+    this.is_open = false;
 
     // Set up the detect
     this.detect();
@@ -810,6 +819,7 @@ module.exports.DevTools = function () {
   }, {
     key: 'banner',
     value: function banner() {
+      console.clear();
       var string = '%c';
       string += '\n/====================================================================\\\n\n';
       string += '   __    __  _______    ______    ______    ______    __   ______\n';
@@ -819,7 +829,7 @@ module.exports.DevTools = function () {
       string += '    \\/_/      \\/_____/   \\/_/\\/_/  \\/_____/  \\/_____/       \\/_____/\n\n';
       string += '                                  Resume\n\n';
       string += '\\====================================================================/\n\n';
-      console.log(string, 'color:#8956a2;');
+      console.log(string, 'color:#' + (this.is_open ? this.colors.secondary : this.colors.primary) + ';');
     }
 
     /**
@@ -856,6 +866,13 @@ module.exports.DevTools = function () {
 
       // Add the class to the wrapper
       this.wrapper.classList[action](this.wrapper_class + '--devtools-open');
+
+      // Store the current state
+      this.is_open = current_state;
+
+      // Rerender the banner and resume
+      this.banner();
+      this.resume();
     }
   }]);
 

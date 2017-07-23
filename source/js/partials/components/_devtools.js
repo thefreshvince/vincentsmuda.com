@@ -10,6 +10,9 @@ import devtools_detect from 'devtools-detect';
 // Imports the resume object
 import {Resume} from './_resume';
 
+// Get the scss variables
+import scss_vars from '../data/_vars';
+
 // Start our devtools class and export it
 module.exports.DevTools = class DevTools {
 
@@ -20,8 +23,8 @@ module.exports.DevTools = class DevTools {
 
     // Set the colors
     this.colors = {
-      primary: '8956a2',
-      secondary: 'c53737'
+      primary: scss_vars['color-primary'],
+      secondary: scss_vars['color-secondary']
     };
 
     // Store the wrapper class
@@ -61,7 +64,7 @@ module.exports.DevTools = class DevTools {
           string += '\\====================================================================/\n\n';
       console.log(
         string,
-        'color:#' + (
+        'color:' + (
           this.is_open
             ? this.colors.secondary
             : this.colors.primary

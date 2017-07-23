@@ -15,7 +15,15 @@ module.exports = {
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader' },
-          { loader: 'sass-loader' }
+          { loader: 'sass-loader' },
+          {
+            loader: "@epegzz/sass-vars-loader",
+            options: {
+              files: [
+                path.resolve(__dirname, './source/js/partials/data/_vars.js'),
+              ],
+            }
+          }
         ]
       },
 

@@ -1,0 +1,17 @@
+/*
+
+	MAIN
+
+*/
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+	transition: background 0.5s;
+
+  .body--devtools-open & {
+    background: $color-secondary;
+  }
+}

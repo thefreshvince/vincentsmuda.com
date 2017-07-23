@@ -6,7 +6,7 @@ import {DevTools} from './partials/components/_devtools';
 import {Wrapper} from './partials/components/_wrapper'
 
 // instantiate our classes
-const devtools = new DevTools(),
+const devtools = new DevTools('body'),
       wrapper = new Wrapper();
 
 // Build the banner

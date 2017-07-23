@@ -1,0 +1,25 @@
+/*
+
+	MIXINS
+
+*/
+
+// Breakpoints
+@mixin break ($size, $direction: 'up') {
+
+	// calculate the value and direction
+	$breakpoint: map-get($breakpoints, $size);
+	$break: map-get($breakpoint, $direction);
+	$dir: 'min';
+
+	// swap direction if needed
+	@if($direction == 'down') {
+		$dir: 'max';
+	}
+
+	// Create the media query
+	@media (#{$dir}-width: #{$break}) {
+		@content;
+	}
+
+}

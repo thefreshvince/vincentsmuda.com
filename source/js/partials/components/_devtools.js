@@ -5,7 +5,7 @@
 */
 
 // Imports the resume object
-import {Resume} from './_resume.js';
+import {Resume} from './_resume';
 
 // Start our devtools class and export it
 module.exports.DevTools = class DevTools {

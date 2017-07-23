@@ -1,0 +1,13 @@
+/**
+ *  System
+ */
+
+::-moz-selection { /* Code for Firefox */
+  color: $color-red;
+  background: $color-yellow;
+}
+
+::selection {
+  color: $color-red;
+  background: $color-yellow;
+}

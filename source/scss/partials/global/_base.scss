@@ -1,0 +1,27 @@
+/**
+ *  Base
+ */
+
+body,html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 0.75em;
+  background: $color-primary;
+  color: $color-white;
+  font-family: 'Nixie One';
+  -webkit-font-smoothing: antialiased;
+
+  @include break(medium) {
+    font-size: 1em;
+  }
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

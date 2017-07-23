@@ -755,10 +755,19 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
 
+// Grabs the devtools detector
+
+
 // Imports the resume object
 
 
+var _devtoolsDetect = __webpack_require__(9);
+
+var _devtoolsDetect2 = _interopRequireDefault(_devtoolsDetect);
+
 var _resume = __webpack_require__(6);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -769,7 +778,18 @@ module.exports.DevTools = function () {
    * Constructs our class
    */
   function DevTools() {
+    var wrapper = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
     _classCallCheck(this, DevTools);
+
+    // Store the wrapper class
+    this.wrapper_class = wrapper || 'main';
+
+    // Set a reference to the wrapper
+    this.wrapper = document.getElementById(this.wrapper_class);
+
+    // Set up the detect
+    this.detect();
   }
 
   /**
@@ -800,6 +820,42 @@ module.exports.DevTools = function () {
       string += '                                  Resume\n\n';
       string += '\\====================================================================/\n\n';
       console.log(string, 'color:#8956a2;');
+    }
+
+    /**
+     * Listens for when devtools are open
+     */
+
+  }, {
+    key: 'detect',
+    value: function detect() {
+      var _this = this;
+
+      // Set the state off the bat
+      this.setToolsState(_devtoolsDetect2.default.open);
+
+      // Listen for changes and set the state
+      window.addEventListener('devtoolschange', function (e) {
+        return _this.setToolsState(e.detail.open);
+      });
+    }
+
+    /**
+     * Sets devtool state
+     */
+
+  }, {
+    key: 'setToolsState',
+    value: function setToolsState() {
+      var open = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+
+      // Set the classlist add/remove
+      var current_state = open === null ? _devtoolsDetect2.default.open : open,
+          action = current_state ? 'add' : 'remove';
+
+      // Add the class to the wrapper
+      this.wrapper.classList[action](this.wrapper_class + '--devtools-open');
     }
   }]);
 
@@ -867,6 +923,65 @@ module.exports.Wrapper = function () {
 
 	return Wrapper;
 }();
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+/* eslint-disable spaced-comment */
+/*!
+	devtools-detect
+	Detect if DevTools is open
+	https://github.com/sindresorhus/devtools-detect
+	by Sindre Sorhus
+	MIT License
+*/
+(function () {
+	'use strict';
+	var devtools = {
+		open: false,
+		orientation: null
+	};
+	var threshold = 160;
+	var emitEvent = function (state, orientation) {
+		window.dispatchEvent(new CustomEvent('devtoolschange', {
+			detail: {
+				open: state,
+				orientation: orientation
+			}
+		}));
+	};
+
+	setInterval(function () {
+		var widthThreshold = window.outerWidth - window.innerWidth > threshold;
+		var heightThreshold = window.outerHeight - window.innerHeight > threshold;
+		var orientation = widthThreshold ? 'vertical' : 'horizontal';
+
+		if (!(heightThreshold && widthThreshold) &&
+      ((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) || widthThreshold || heightThreshold)) {
+			if (!devtools.open || devtools.orientation !== orientation) {
+				emitEvent(true, orientation);
+			}
+
+			devtools.open = true;
+			devtools.orientation = orientation;
+		} else {
+			if (devtools.open) {
+				emitEvent(false, null);
+			}
+
+			devtools.open = false;
+			devtools.orientation = null;
+		}
+	}, 500);
+
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = devtools;
+	} else {
+		window.devtools = devtools;
+	}
+})();
+
 
 /***/ })
 /******/ ]);

@@ -4,6 +4,9 @@
 
 */
 
+// Grabs the devtools detector
+import devtools_detect from 'devtools-detect';
+
 // Imports the resume object
 import {Resume} from './_resume';
 
@@ -13,7 +16,18 @@ module.exports.DevTools = class DevTools {
 	/**
 	 * Constructs our class
 	 */
-  constructor () {}
+  constructor (wrapper = null) {
+
+    // Store the wrapper class
+    this.wrapper_class = wrapper || 'main'
+
+    // Set a reference to the wrapper
+    this.wrapper = document.getElementById(this.wrapper_class);
+
+    // Set up the detect
+    this.detect();
+
+  }
 
 	/**
 	 * Logs the resume
@@ -36,6 +50,36 @@ module.exports.DevTools = class DevTools {
           string += '                                  Resume\n\n';
           string += '\\====================================================================/\n\n';
       console.log(string,'color:#8956a2;');
+  }
+
+  /**
+   * Listens for when devtools are open
+   */
+  detect () {
+
+    // Set the state off the bat
+    this.setToolsState(devtools_detect.open);
+
+    // Listen for changes and set the state
+    window.addEventListener(
+      'devtoolschange',
+      e => this.setToolsState(e.detail.open)
+    );
+
+  }
+
+  /**
+   * Sets devtool state
+   */
+  setToolsState (open = null) {
+
+    // Set the classlist add/remove
+    let current_state = open === null ? devtools_detect.open : open,
+        action = current_state?'add':'remove';
+
+    // Add the class to the wrapper
+    this.wrapper.classList[action](`${this.wrapper_class}--devtools-open`);
+
   }
 
 }

@@ -45,8 +45,19 @@
     <title>Vincent Smuda. I write Javascript.</title>
 
     <style media="screen">
+      @keyframes purpleIn {
+        from {
+          background: #fff;
+        }
+        to {
+          background: #8956a2;
+        }
+      }
       body{
-        background: #8956a2;
+        animation-duration: 0.5s;
+        animation-fill-mode: both;
+        animation-name: purpleIn;
+        background: #fff;
       }
       .main{
         display: none;
@@ -74,7 +85,7 @@
               'github' =>	 'https://github.com/thefreshvince" target="_blank',
               'npm' => 'https://www.npmjs.com/~vincentsmuda" target="_blank',
               'linkedin' => 'https://www.linkedin.com/in/vincent-smuda-80b27014/" target="_blank',
-              'CV <span class="shortcut browser__osx">(Cmd + Opt + j)</span><span class="shortcut browser__other">(Ctrl + Shift + J)</span>' => '/assets/documents/resume.pdf" target="_blank'
+              'CV <span class="shortcut browser__osx">(Cmd + Opt + j)</span><span class="shortcut browser__other">(Ctrl + Shift + J)</span>' => '/assets/documents/resume.pdf?v=2" target="_blank'
             ] as $text => $link)
               echo "
                 <li class=\"animated\">

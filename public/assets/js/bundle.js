@@ -93,7 +93,7 @@ if (navigator.userAgent && ~navigator.userAgent.indexOf('Mac OS X')) el_main.cla
 // Set the timeout
 setTimeout(function () {
   return el_main.classList.add('loaded');
-}, 500);
+}, 1000);
 
 /***/ }),
 /* 1 */

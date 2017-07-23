@@ -25,5 +25,5 @@ setTimeout(
   () => el_main
     .classList
     .add('loaded'),
-  500
+  1000
 );

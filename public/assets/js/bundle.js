@@ -72,9 +72,9 @@
 
 __webpack_require__(1);
 
-var _devtools = __webpack_require__(7);
+var _devtools = __webpack_require__(6);
 
-var _wrapper = __webpack_require__(8);
+var _wrapper = __webpack_require__(9);
 
 // instantiate our classes
 var devtools = new _devtools.DevTools('body'),
@@ -114,8 +114,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./styles.scss", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./styles.scss");
+		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/@epegzz/sass-vars-loader/src/index.js??ref--0-3!./styles.scss", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/@epegzz/sass-vars-loader/src/index.js??ref--0-3!./styles.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -133,7 +133,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/**\n *  Style\n *  It all comes together here...\n */\n/**\n *  Colors\n */\n/**\n *  Breakpoints\n */\n/*\n\n\tMIXINS\n\n*/\n/**\n *  System\n */\n::-moz-selection {\n  /* Code for Firefox */\n  color: red;\n  background: yellow; }\n\n::selection {\n  color: red;\n  background: yellow; }\n\n/**\n *  Animations\n */\n@keyframes fadeInUp {\n  from {\n    opacity: 0;\n    transform: translate3d(0, 20px, 0); }\n  to {\n    opacity: 1;\n    transform: none; } }\n\n/**\n *  Base\n */\nbody, html {\n  margin: 0;\n  padding: 0; }\n\n.body {\n  font-size: 0.75em;\n  background: #8956a2;\n  color: #fff;\n  font-family: 'Nixie One';\n  -webkit-font-smoothing: antialiased; }\n  .body--devtools-open {\n    background: #c53737; }\n  @media (min-width: 500px) {\n    .body {\n      font-size: 1em; } }\n\n/*\n\n\tMAIN\n\n*/\n.main {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  transition: background 0.5s; }\n  .body--devtools-open .main {\n    background: #c53737; }\n\n/**\n *  Formatting\n */\na {\n  color: #fff;\n  text-decoration: none;\n  transition: all 0.2s;\n  word-break: break-all; }\n  a:hover {\n    color: yellow; }\n  .main--loaded a {\n    word-wrap: break-word; }\n\nul {\n  font-size: 1.5em;\n  margin: 0;\n  padding: 0;\n  list-style: none; }\n\nli {\n  display: none;\n  animation-name: fadeInUp;\n  margin: 0 0 10px;\n  padding: 0; }\n  li:last-child {\n    margin-bottom: 0; }\n  li:nth-child(1) {\n    animation-delay: 0.1s; }\n  li:nth-child(2) {\n    animation-delay: 0.2s; }\n  li:nth-child(3) {\n    animation-delay: 0.3s; }\n  li:nth-child(4) {\n    animation-delay: 0.4s; }\n  li:nth-child(5) {\n    animation-delay: 0.5s; }\n  .main--loaded li {\n    display: block; }\n\n/**\n *  Helpers\n */\n.animated {\n  animation-duration: 0.5s;\n  animation-fill-mode: both; }\n\n/**\n *\tBrowser\n */\n.browser__osx {\n  display: none; }\n  .browser--osx .browser__osx {\n    display: inline-block; }\n\n.browser__other {\n  display: inline-block; }\n  .browser--osx .browser__other {\n    display: none; }\n\n/**\n *\tShorcut Displayer\n */\n.shortcut {\n  font-size: 0.7em;\n  vertical-align: middle; }\n  @media (max-width: 499px) {\n    .shortcut {\n      display: none !important; } }\n\n/**\n *\tTitle\n */\n.title {\n  display: none;\n  animation-name: fadeInUp; }\n  .title__pre {\n    display: inline-block;\n    font-size: 0.4em;\n    opacity: 0.5; }\n  .main--loaded .title {\n    display: block; }\n\n/**\n *\tHouses the site's content\n */\n.content {\n  padding: 20px;\n  max-width: 540px;\n  box-sizing: border-box; }\n", ""]);
+exports.push([module.i, "/**\n *  Style\n *  It all comes together here...\n */\n/**\n *  Colors\n */\n/**\n *  Breakpoints\n */\n/*\n\n\tMIXINS\n\n*/\n/**\n *  System\n */\n::-moz-selection {\n  /* Code for Firefox */\n  color: #f00000;\n  background: #ff0000; }\n\n::selection {\n  color: #f00000;\n  background: #ff0000; }\n\n/**\n *  Animations\n */\n@keyframes fadeInUp {\n  from {\n    opacity: 0;\n    transform: translate3d(0, 20px, 0); }\n  to {\n    opacity: 1;\n    transform: none; } }\n\n/**\n *  Base\n */\nbody, html {\n  margin: 0;\n  padding: 0; }\n\n.body {\n  font-size: 0.75em;\n  background: #8956a2;\n  color: #ffffff;\n  font-family: 'Nixie One';\n  -webkit-font-smoothing: antialiased; }\n  .body--devtools-open {\n    background: #c53737; }\n  @media (min-width: 500px) {\n    .body {\n      font-size: 1em; } }\n\n/*\n\n\tMAIN\n\n*/\n.main {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  transition: background 0.5s; }\n  .body--devtools-open .main {\n    background: #c53737; }\n\n/**\n *  Formatting\n */\na {\n  color: #ffffff;\n  text-decoration: none;\n  transition: all 0.2s;\n  word-break: break-all; }\n  a:hover {\n    color: yellow; }\n  .main--loaded a {\n    word-wrap: break-word; }\n\nul {\n  font-size: 1.5em;\n  margin: 0;\n  padding: 0;\n  list-style: none; }\n\nli {\n  display: none;\n  animation-name: fadeInUp;\n  margin: 0 0 10px;\n  padding: 0; }\n  li:last-child {\n    margin-bottom: 0; }\n  li:nth-child(1) {\n    animation-delay: 0.1s; }\n  li:nth-child(2) {\n    animation-delay: 0.2s; }\n  li:nth-child(3) {\n    animation-delay: 0.3s; }\n  li:nth-child(4) {\n    animation-delay: 0.4s; }\n  li:nth-child(5) {\n    animation-delay: 0.5s; }\n  .main--loaded li {\n    display: block; }\n\n/**\n *  Helpers\n */\n.animated {\n  animation-duration: 0.5s;\n  animation-fill-mode: both; }\n\n/**\n *\tBrowser\n */\n.browser__osx {\n  display: none; }\n  .browser--osx .browser__osx {\n    display: inline-block; }\n\n.browser__other {\n  display: inline-block; }\n  .browser--osx .browser__other {\n    display: none; }\n\n/**\n *\tShorcut Displayer\n */\n.shortcut {\n  font-size: 0.7em;\n  vertical-align: middle; }\n  @media (max-width: 499px) {\n    .shortcut {\n      display: none !important; } }\n\n/**\n *\tTitle\n */\n.title {\n  display: none;\n  animation-name: fadeInUp; }\n  .title__pre {\n    display: inline-block;\n    font-size: 0.4em;\n    opacity: 0.5; }\n  .main--loaded .title {\n    display: block; }\n\n/**\n *\tHouses the site's content\n */\n.content {\n  padding: 20px;\n  max-width: 540px;\n  box-sizing: border-box; }\n", ""]);
 
 // exports
 
@@ -681,6 +681,209 @@ module.exports = function (css) {
 "use strict";
 
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	DEVTOOLS
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     */
+
+// Grabs the devtools detector
+
+
+// Imports the resume object
+
+
+// Get the scss variables
+
+
+var _devtoolsDetect = __webpack_require__(7);
+
+var _devtoolsDetect2 = _interopRequireDefault(_devtoolsDetect);
+
+var _resume = __webpack_require__(8);
+
+var _vars = __webpack_require__(10);
+
+var _vars2 = _interopRequireDefault(_vars);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// Start our devtools class and export it
+module.exports.DevTools = function () {
+
+  /**
+   * Constructs our class
+   */
+  function DevTools() {
+    var wrapper = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+    _classCallCheck(this, DevTools);
+
+    // Set the colors
+    this.colors = {
+      primary: _vars2.default['color-primary'],
+      secondary: _vars2.default['color-secondary']
+    };
+
+    // Store the wrapper class
+    this.wrapper_class = wrapper || 'main';
+
+    // Set a reference to the wrapper
+    this.wrapper = document.getElementById(this.wrapper_class);
+
+    // Set the current state of the devtools
+    this.is_open = false;
+
+    // Set up the detect
+    this.detect();
+  }
+
+  /**
+   * Logs the resume
+   */
+
+
+  _createClass(DevTools, [{
+    key: 'resume',
+    value: function resume() {
+      console.log(_resume.Resume);
+    }
+
+    /**
+     * Builds the banner
+     */
+
+  }, {
+    key: 'banner',
+    value: function banner() {
+      console.clear();
+      var string = '%c';
+      string += '\n/====================================================================\\\n\n';
+      string += '   __    __  _______    ______    ______    ______    __   ______\n';
+      string += '  /\\ \\  / / /\\__  __\\  /\\  __ \\  /\\  ___\\  /\\  ___\\  /\\_\\ /\\  ___\\\n';
+      string += '  \\ \\ \\/ /  \\///\\ \\//  \\ \\ \\ \\ \\ \\ \\ \\____ \\ \\  ___\\ \\/_/ \\ \\___  \\\n';
+      string += '   \\ \\__/     /\\_____\\  \\ \\_\\ \\_\\ \\ \\_____\\ \\ \\_____\\      \\/\\_____\\\n';
+      string += '    \\/_/      \\/_____/   \\/_/\\/_/  \\/_____/  \\/_____/       \\/_____/\n\n';
+      string += '                                  Resume\n\n';
+      string += '\\====================================================================/\n\n';
+      console.log(string, 'color:' + (this.is_open ? this.colors.secondary : this.colors.primary) + ';');
+    }
+
+    /**
+     * Listens for when devtools are open
+     */
+
+  }, {
+    key: 'detect',
+    value: function detect() {
+      var _this = this;
+
+      // Set the state off the bat
+      this.setToolsState(_devtoolsDetect2.default.open);
+
+      // Listen for changes and set the state
+      window.addEventListener('devtoolschange', function (e) {
+        return _this.setToolsState(e.detail.open);
+      });
+    }
+
+    /**
+     * Sets devtool state
+     */
+
+  }, {
+    key: 'setToolsState',
+    value: function setToolsState() {
+      var open = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+
+      // Set the classlist add/remove
+      var current_state = open === null ? _devtoolsDetect2.default.open : open,
+          action = current_state ? 'add' : 'remove';
+
+      // Add the class to the wrapper
+      this.wrapper.classList[action](this.wrapper_class + '--devtools-open');
+
+      // Store the current state
+      this.is_open = current_state;
+
+      // Rerender the banner and resume
+      this.banner();
+      this.resume();
+    }
+  }]);
+
+  return DevTools;
+}();
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+/* eslint-disable spaced-comment */
+/*!
+	devtools-detect
+	Detect if DevTools is open
+	https://github.com/sindresorhus/devtools-detect
+	by Sindre Sorhus
+	MIT License
+*/
+(function () {
+	'use strict';
+	var devtools = {
+		open: false,
+		orientation: null
+	};
+	var threshold = 160;
+	var emitEvent = function (state, orientation) {
+		window.dispatchEvent(new CustomEvent('devtoolschange', {
+			detail: {
+				open: state,
+				orientation: orientation
+			}
+		}));
+	};
+
+	setInterval(function () {
+		var widthThreshold = window.outerWidth - window.innerWidth > threshold;
+		var heightThreshold = window.outerHeight - window.innerHeight > threshold;
+		var orientation = widthThreshold ? 'vertical' : 'horizontal';
+
+		if (!(heightThreshold && widthThreshold) &&
+      ((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) || widthThreshold || heightThreshold)) {
+			if (!devtools.open || devtools.orientation !== orientation) {
+				emitEvent(true, orientation);
+			}
+
+			devtools.open = true;
+			devtools.orientation = orientation;
+		} else {
+			if (devtools.open) {
+				emitEvent(false, null);
+			}
+
+			devtools.open = false;
+			devtools.orientation = null;
+		}
+	}, 500);
+
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = devtools;
+	} else {
+		window.devtools = devtools;
+	}
+})();
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 /*
 
 	RESUME
@@ -743,144 +946,7 @@ module.exports.Resume = {
 };
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	DEVTOOLS
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     */
-
-// Grabs the devtools detector
-
-
-// Imports the resume object
-
-
-var _devtoolsDetect = __webpack_require__(9);
-
-var _devtoolsDetect2 = _interopRequireDefault(_devtoolsDetect);
-
-var _resume = __webpack_require__(6);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-// Start our devtools class and export it
-module.exports.DevTools = function () {
-
-  /**
-   * Constructs our class
-   */
-  function DevTools() {
-    var wrapper = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-
-    _classCallCheck(this, DevTools);
-
-    // Set the colors
-    this.colors = {
-      primary: '8956a2',
-      secondary: 'c53737'
-    };
-
-    // Store the wrapper class
-    this.wrapper_class = wrapper || 'main';
-
-    // Set a reference to the wrapper
-    this.wrapper = document.getElementById(this.wrapper_class);
-
-    // Set the current state of the devtools
-    this.is_open = false;
-
-    // Set up the detect
-    this.detect();
-  }
-
-  /**
-   * Logs the resume
-   */
-
-
-  _createClass(DevTools, [{
-    key: 'resume',
-    value: function resume() {
-      console.log(_resume.Resume);
-    }
-
-    /**
-     * Builds the banner
-     */
-
-  }, {
-    key: 'banner',
-    value: function banner() {
-      console.clear();
-      var string = '%c';
-      string += '\n/====================================================================\\\n\n';
-      string += '   __    __  _______    ______    ______    ______    __   ______\n';
-      string += '  /\\ \\  / / /\\__  __\\  /\\  __ \\  /\\  ___\\  /\\  ___\\  /\\_\\ /\\  ___\\\n';
-      string += '  \\ \\ \\/ /  \\///\\ \\//  \\ \\ \\ \\ \\ \\ \\ \\____ \\ \\  ___\\ \\/_/ \\ \\___  \\\n';
-      string += '   \\ \\__/     /\\_____\\  \\ \\_\\ \\_\\ \\ \\_____\\ \\ \\_____\\      \\/\\_____\\\n';
-      string += '    \\/_/      \\/_____/   \\/_/\\/_/  \\/_____/  \\/_____/       \\/_____/\n\n';
-      string += '                                  Resume\n\n';
-      string += '\\====================================================================/\n\n';
-      console.log(string, 'color:#' + (this.is_open ? this.colors.secondary : this.colors.primary) + ';');
-    }
-
-    /**
-     * Listens for when devtools are open
-     */
-
-  }, {
-    key: 'detect',
-    value: function detect() {
-      var _this = this;
-
-      // Set the state off the bat
-      this.setToolsState(_devtoolsDetect2.default.open);
-
-      // Listen for changes and set the state
-      window.addEventListener('devtoolschange', function (e) {
-        return _this.setToolsState(e.detail.open);
-      });
-    }
-
-    /**
-     * Sets devtool state
-     */
-
-  }, {
-    key: 'setToolsState',
-    value: function setToolsState() {
-      var open = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-
-
-      // Set the classlist add/remove
-      var current_state = open === null ? _devtoolsDetect2.default.open : open,
-          action = current_state ? 'add' : 'remove';
-
-      // Add the class to the wrapper
-      this.wrapper.classList[action](this.wrapper_class + '--devtools-open');
-
-      // Store the current state
-      this.is_open = current_state;
-
-      // Rerender the banner and resume
-      this.banner();
-      this.resume();
-    }
-  }]);
-
-  return DevTools;
-}();
-
-/***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -942,63 +1008,23 @@ module.exports.Wrapper = function () {
 }();
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports) {
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/* eslint-disable spaced-comment */
-/*!
-	devtools-detect
-	Detect if DevTools is open
-	https://github.com/sindresorhus/devtools-detect
-	by Sindre Sorhus
-	MIT License
-*/
-(function () {
-	'use strict';
-	var devtools = {
-		open: false,
-		orientation: null
-	};
-	var threshold = 160;
-	var emitEvent = function (state, orientation) {
-		window.dispatchEvent(new CustomEvent('devtoolschange', {
-			detail: {
-				open: state,
-				orientation: orientation
-			}
-		}));
-	};
+"use strict";
 
-	setInterval(function () {
-		var widthThreshold = window.outerWidth - window.innerWidth > threshold;
-		var heightThreshold = window.outerHeight - window.innerHeight > threshold;
-		var orientation = widthThreshold ? 'vertical' : 'horizontal';
 
-		if (!(heightThreshold && widthThreshold) &&
-      ((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) || widthThreshold || heightThreshold)) {
-			if (!devtools.open || devtools.orientation !== orientation) {
-				emitEvent(true, orientation);
-			}
+/**
+ * Variables shared between js and scss
+ */
 
-			devtools.open = true;
-			devtools.orientation = orientation;
-		} else {
-			if (devtools.open) {
-				emitEvent(false, null);
-			}
-
-			devtools.open = false;
-			devtools.orientation = null;
-		}
-	}, 500);
-
-	if (typeof module !== 'undefined' && module.exports) {
-		module.exports = devtools;
-	} else {
-		window.devtools = devtools;
-	}
-})();
-
+module.exports = {
+  'color-primary': '#8956a2',
+  'color-secondary': '#c53737',
+  'color-white': '#ffffff',
+  'color-red': '#f00000',
+  'color-yellow': '#ff0000'
+};
 
 /***/ })
 /******/ ]);

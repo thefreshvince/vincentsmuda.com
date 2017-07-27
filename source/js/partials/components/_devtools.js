@@ -7,11 +7,11 @@
 // Grabs the devtools detector
 import devtools_detect from 'devtools-detect';
 
-// Imports the resume object
-import {Resume} from './_resume';
-
 // Get the scss variables
 import scss_vars from '../data/_vars';
+
+// Imports the resume object
+import {Resume} from './_resume';
 
 // Start our devtools class and export it
 module.exports.DevTools = class DevTools {

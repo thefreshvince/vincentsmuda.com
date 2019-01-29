@@ -23,6 +23,7 @@
     <meta property="og:site_name" content="Vincent Smuda. I write Javascript" />
     <meta property="og:description" content="Continuously writing Javascript, SCSS, HTML, and PHP." />
     <meta property="og:image" content="http://vincentsmuda.com/assets/images/og-image.png?v=4" />
+    <meta property="we are watching" content="you" />
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/apple-icon-57x57.png?v=2">

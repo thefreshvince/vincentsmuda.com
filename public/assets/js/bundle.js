@@ -690,21 +690,21 @@ var _createClass = function () { function defineProperties(target, props) { for 
 // Grabs the devtools detector
 
 
-// Get the scss variables
-
-
 // Imports the resume object
+
+
+// Get the scss variables
 
 
 var _devtoolsDetect = __webpack_require__(7);
 
 var _devtoolsDetect2 = _interopRequireDefault(_devtoolsDetect);
 
+var _resume = __webpack_require__(8);
+
 var _vars = __webpack_require__(10);
 
 var _vars2 = _interopRequireDefault(_vars);
-
-var _resume = __webpack_require__(8);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
